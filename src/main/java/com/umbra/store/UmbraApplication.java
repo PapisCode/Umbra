@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class UmbraApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(UmbraApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(UmbraApplication.class, args);
+    }
 }
