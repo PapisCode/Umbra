@@ -57,10 +57,10 @@ Overall, my main contribution was getting the project into a clean working state
 I tested and made sure: adding an item to the list via item form, validation on server-side, items are saved properly to the database, redirection, and new items appear correctly in the item list. All aforementioned features must work.
 
 Tested:
-- [✅] Adding item via item form
-- [✅] Redirection
-- [✅] Added item shown in item list
-- [❌] Item saved into the database
+  - [✅] Adding item via item form
+  - [✅] Redirection
+  - [✅] Added item shown in item list
+  - [❌] Item saved into the database
 
 Fixed:
   - [✅] Item saved into the database
