@@ -1,9 +1,11 @@
 # Umbra
+
 Final Project for Web Application Development - CPAN-228-RNA
 
 ## Team Contributions
 
 ### Gabriel Hernandez
+
 I was mainly responsible for setting up, organizing, fixing, and styling the front-end structure of the project for Deliverable 1.
 
 My work included:
@@ -49,6 +51,26 @@ My work included:
   - `feature/gabriel-ui-items`
 
 Overall, my main contribution was getting the project into a clean working state for Deliverable 1 and building the front-end/UI side of the application so the app could be demoed properly with working pages, seeded data, and a consistent design.
+
+### Andre Tolentino
+
+I tested and made sure: adding an item to the list via item form, validation on server-side, items are saved properly to the database, redirection, and new items appear correctly in the item list. All aforementioned features must work.
+
+Tested:
+- [✅] Adding item via item form
+- [✅] Redirection
+- [✅] Added item shown in item list
+- [❌] Item saved into the database
+
+Fixed:
+  - [✅] Item saved into the database
+
+Worked On (Database):
+  - fixed/changed the application.properties to handle postgresql instead of H2, to allow items save in the database
+  - added DO CONFLICT () DO NOTHING statements after the end of INSERT VALUES lines due to error inserting already existing data in the database
+  - added postgresql dependency to handle postgresql 
+
+Other than testing and fixing the database, I also added a pagnination to show the rest of the items that aren't visible.
 
 ## Branch Strategy
 
