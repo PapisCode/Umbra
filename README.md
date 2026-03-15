@@ -50,6 +50,12 @@ My work included:
 
 Overall, my main contribution was getting the project into a clean working state for Deliverable 1 and building the front-end/UI side of the application so the app could be demoed properly with working pages, seeded data, and a consistent design.
 
+
+- I tested the app's functionality (backend, UI, checked forn and server-side validation)
+- Fixed page UI for floating footers
+  - `feature/oluwaseun-updates`
+  
+
 ## Branch Strategy
 
 Each team member worked on their own feature branch before merging changes into the main branch. This was done to keep work organized, avoid conflicts, and clearly show individual contributions.
