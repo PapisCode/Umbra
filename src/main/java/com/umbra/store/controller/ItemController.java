@@ -56,6 +56,10 @@ public class ItemController {
         model.addAttribute("currentPage", page);
         model.addAttribute("pageSize", size);
 
+        model.addAttribute("hasNext", itemPage.hasNext());
+        model.addAttribute("hasPrevious", itemPage.hasPrevious());
+        model.addAttribute("totalPages", itemPage.getTotalPages());
+
         return "items";
     }
 

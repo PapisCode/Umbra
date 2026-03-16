@@ -1,9 +1,11 @@
 # Umbra
+
 Final Project for Web Application Development - CPAN-228-RNA
 
 ## Team Contributions
 
 ### Gabriel Hernandez
+
 I was mainly responsible for setting up, organizing, fixing, and styling the front-end structure of the project for Deliverable 1.
 
 My work included:
@@ -50,12 +52,22 @@ My work included:
 
 Overall, my main contribution was getting the project into a clean working state for Deliverable 1 and building the front-end/UI side of the application so the app could be demoed properly with working pages, seeded data, and a consistent design.
 
+### Oluwaseun
 
-- I tested the app's functionality (backend, UI, checked forn and server-side validation)
-- Fixed page UI for floating footers
+- tested the app’s functionality on both the backend and UI side
+- checked the form flow and server-side validation
+- fixed UI issues related to floating footers
+- did this work on the branch:
   - `feature/oluwaseun-updates`
   
+### Andre Tolentino
 
+- tested the item form workflow and made sure item submission works properly
+- verified server-side validation, redirect behavior, and that new items appear correctly in the item list
+- worked on the database-related item save flow and helped confirm item records persist correctly
+- added and checked pagination behavior for the item list
+- did this work on the branch:
+  - `feature/andre-tolentino`
 ## Branch Strategy
 
 Each team member worked on their own feature branch before merging changes into the main branch. This was done to keep work organized, avoid conflicts, and clearly show individual contributions.
