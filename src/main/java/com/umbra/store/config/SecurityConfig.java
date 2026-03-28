@@ -29,7 +29,18 @@ public class SecurityConfig {
         http
                 .userDetailsService(customUserDetailsService)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/about", "/items", "/register", "/login", "/h2-console/**").permitAll()
+                        .requestMatchers(
+                                "/",
+                                "/about",
+                                "/brands",
+                                "/items",
+                                "/register",
+                                "/login",
+                                "/css/**",
+                                "/js/**",
+                                "/images/**",
+                                "/h2-console/**"
+                        ).permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/items/new", "/items/save").hasAnyRole("STAFF", "ADMIN")
                         .anyRequest().authenticated()
@@ -42,9 +53,6 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutSuccessUrl("/login?logout")
                         .permitAll()
-                )
-                .exceptionHandling(ex -> ex
-                        .accessDeniedPage("/login")
                 );
 
         http.csrf(csrf -> csrf
