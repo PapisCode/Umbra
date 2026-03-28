@@ -2,7 +2,7 @@
 
 Final Project for Web Application Development - CPAN-228-RNA
 
-## Team Contributions
+## Team Contributions / Phase 1
 
 ### Gabriel Hernandez
 
@@ -71,3 +71,76 @@ Overall, my main contribution was getting the project into a clean working state
 ## Branch Strategy
 
 Each team member worked on their own feature branch before merging changes into the main branch. This was done to keep work organized, avoid conflicts, and clearly show individual contributions.
+
+______________________________________________________________________________________________________________________________
+
+## Team Contributions / Phase 2
+
+### Gabriel Hernandez
+
+For Phase 2, I was responsible for implementing the full security and user management system using Spring Security, as well as integrating it with the existing application.
+
+My contributions included:
+
+- adding Spring Security dependency and configuring the project for authentication and authorization
+- creating the Role enum with:
+1. ADMIN
+2. STAFF
+3. CUSTOMER
+- creating the User entity and implementing UserDetails for Spring Security compatibility
+- creating the UserRepository to load users from the database
+- creating CustomUserDetailsService to handle user authentication logic
+- configuring security using SecurityFilterChain instead of deprecated configurations
+- defining public and protected routes:
+1. public: /, /about, /brands, /items, /login, /register
+2. protected: /items/new, /items/save
+3. admin-only: /admin
+- implementing role-based access control using:
+1. hasRole("ADMIN")
+2. hasAnyRole("STAFF", "ADMIN")
+- building a custom login page:
+1. styled with Bootstrap
+2. displays error messages for invalid credentials
+- building a custom registration page:
+1. form validation using annotations
+2. password confirmation check
+3. username uniqueness validation
+- implementing password encoding using BCrypt before saving users
+- creating a DataInitializer to seed test users with encoded passwords:
+1. admin / admin123
+2. staff / staff123
+3. customer / customer123
+- creating the AuthController to handle login and registration routes
+- creating the AdminController to provide an admin-only dashboard page
+- building the admin dashboard page:
+1. displays users
+2. displays items
+3. styled as an administrative interface
+- protecting routes so:
+1. unauthenticated users are redirected to login
+2. unauthorized users receive forbidden access
+- updating the navbar to dynamically show:
+1. login/register links when logged out
+2. username and logout when logged in
+3. admin link only for ADMIN users
+- restricting UI elements using Thymeleaf Security:
+1. hiding "Add Item" button for non-staff/non-admin users
+- fixing authentication redirect loops by separating login page and processing URL
+- testing all role-based scenarios:
+1. admin full access
+2. staff limited access
+3. customer restricted access
+- verifying password encryption using the H2 database console
+- recording the Deliverable 2 demo video demonstrating:
+1. public access
+2. login and logout
+3. role-based restrictions
+4. registration flow
+5. encoded passwords in database
+- managing all Phase 2 work through my feature branch:
+- feature/gabriel-security
+- merging Phase 2 changes into the main branch after completion
+
+
+
+
