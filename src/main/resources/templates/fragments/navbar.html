@@ -10,7 +10,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/}">Home</a>
                 </li>
@@ -22,6 +22,34 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/about}">About</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="hasAnyRole('ADMIN','STAFF')">
+                    <a class="nav-link" th:href="@{/items/new}">Add Item</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/admin}">Admin</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link" th:href="@{/login}">Login</a>
+                </li>
+
+                <li class="nav-item text-light ms-lg-3" sec:authorize="isAuthenticated()">
+                    <span class="navbar-text text-light">
+                        Logged in as: <strong sec:authentication="name">user</strong>
+                    </span>
+                </li>
+
+                <li class="nav-item ms-lg-2" sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
+                    </form>
                 </li>
             </ul>
         </div>
