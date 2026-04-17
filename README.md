@@ -195,7 +195,15 @@ My contributions included:
     - feature/phase3-deployment
 14. merging Phase 3 changes into the main branch after completion
 
+### Andre Tolentino
 
+My work included:
 
-
-
+1. Updated Dockerfile to run without errors after using Docker.
+    - copied elements of a dockerfile in lab 7
+    - removed the line causing the issue: copying a non-existent file in dir targer
+    - changed entrypoint to cmd
+    - modified the removed line and added it along with running the maven package, to copy the target/*.jar into /app/app.jar
+2. Removed extra navbar in register page.
+3. Added a gap between logout button and 'logged in as: x' 
+4. Changed footer from 'Deliverable 1' to 'Final Deliverable'
