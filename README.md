@@ -207,3 +207,13 @@ My work included:
 2. Removed extra navbar in register page.
 3. Added a gap between logout button and 'logged in as: x' 
 4. Changed footer from 'Deliverable 1' to 'Final Deliverable'
+
+_______________________________________________________________________________________________________________________________________
+
+How to run app using Docker:
+1. Have Docker Desktop open.
+  Terminal:
+    2. Enter 'docker compose build'. 
+    3. Enter 'docker compose pull'.
+    4. Enter 'docker compose up -d'.
+    5. Access 'localhost:8080' app.
