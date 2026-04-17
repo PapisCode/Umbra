@@ -140,6 +140,61 @@ My contributions included:
 - managing all Phase 2 work through my feature branch:
 - feature/gabriel-security
 - merging Phase 2 changes into the main branch after completion
+_______________________________________________________________________________________________________________________________________
+
+## Team Contributions / Phase 3
+
+### Gabriel Hernandez
+
+For Phase 3, I was responsible for deploying the application in a production-like environment using Docker and integrating a MySQL database.
+
+My contributions included:
+
+1. implementing full Docker support for the application
+2. creating a Dockerfile to package the Spring Boot application into a container
+3. creating a docker-compose.yml file to orchestrate:
+    - the Spring Boot application container
+    - the MySQL database container
+4. configuring the application to support multiple environments using Spring profiles:
+  1. dev profile
+    - uses H2 in-memory database
+    - used for local development and testing
+  2. qa profile
+    - uses MySQL database running in Docker
+    - simulates a production-like environment
+5. restructuring configuration files:
+  1. moved database settings into:
+    - application-dev.properties
+    - application-qa.properties
+    - simplified base application.properties
+6. adding MySQL driver dependency to the project
+7. configuring database connection for Docker environment:
+    - host: mysql
+    - database: umbra_db
+    - user: umbra_user
+8. resolving Docker and environment issues including:
+    - container startup failures
+    - database connection issues
+    - duplicate data errors caused by persistent volumes
+9. fixing SQL initialization issues by:
+    - adjusting Hibernate settings for clean schema creation
+    - ensuring data.sql runs correctly with MySQL
+10. verifying that:
+    - application runs fully inside Docker
+    - MySQL container is connected and working
+    - seeded data (brands, categories, items) loads correctly
+    - user authentication system continues to function with MySQL
+11. testing full application flow inside Docker:
+    - home page
+    - item catalog
+    - login and registration
+    - role-based access
+12. confirming the application is accessible via:
+    - http://localhost:8080
+13. managing all Phase 3 work through my feature branch:
+    - feature/phase3-deployment
+14. merging Phase 3 changes into the main branch after completion
+
 
 
 
