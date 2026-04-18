@@ -40,13 +40,13 @@
                     <a class="nav-link" th:href="@{/login}">Login</a>
                 </li>
 
-                <li class="nav-item text-light ms-lg-3" sec:authorize="isAuthenticated()">
+                <li class="nav-item text-light ms-lg-3 mt-sm-2" sec:authorize="isAuthenticated()">
                     <span class="navbar-text text-light">
                         Logged in as: <strong sec:authentication="name">user</strong>
                     </span>
                 </li>
 
-                <li class="nav-item ms-lg-2" sec:authorize="isAuthenticated()">
+                <li class="nav-item ms-lg-3 mt-sm-3 mt-lg-0 mb-sm-2 mb-lg-0" sec:authorize="isAuthenticated()">
                     <form th:action="@{/logout}" method="post" class="d-inline">
                         <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
                     </form>
