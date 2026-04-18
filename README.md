@@ -212,9 +212,7 @@ ________________________________________________________________________________
 
 How to run app using Docker:
 1. Have Docker Desktop open.
-   
-Terminal:
-2. Enter 'docker compose build'. 
-3. Enter 'docker compose pull'.
-4. Enter 'docker compose up -d'.
+2. Enter 'docker compose build' in terminal. 
+3. Enter 'docker compose pull' in terminal.
+4. Enter 'docker compose up -d' in terminal.
 5. Check 'localhost:8080'.
